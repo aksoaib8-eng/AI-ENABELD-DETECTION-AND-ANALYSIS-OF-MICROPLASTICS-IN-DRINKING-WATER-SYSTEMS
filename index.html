@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MicroDetect AI | Microplastic Detection</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+        <nav>
+            <div class="logo">MicroDetect <span>AI</span></div>
+
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#detection">Detection</a></li>
+                <li><a href="#analysis">Analysis</a></li>
+                <li><a href="#about">About</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1>AI-Enabled Detection & Analysis of Microplastics</h1>
+
+            <p>
+                Intelligent analysis of drinking water samples using
+                AI-based image detection and data analysis.
+            </p>
+
+            <a href="#detection" class="btn">Start Detection</a>
+        </div>
+
+        <div class="hero-card">
+            <h2>AI Water Analysis</h2>
+            <p>Detect • Analyze • Monitor</p>
+            <div class="circle">AI</div>
+        </div>
+    </section>
+
+    <section class="stats">
+        <div>
+            <h2 id="samples">0</h2>
+            <p>Samples Analyzed</p>
+        </div>
+
+        <div>
+            <h2 id="particles">0</h2>
+            <p>Particles Detected</p>
+        </div>
+
+        <div>
+            <h2>AI</h2>
+            <p>Detection System</p>
+        </div>
+
+        <div>
+            <h2>24/7</h2>
+            <p>Monitoring</p>
+        </div>
+    </section>
+
+    <section id="detection" class="section">
+        <h2>Microplastic Detection</h2>
+
+        <p class="section-text">
+            Upload a microscope image or water sample image to analyze
+            possible microplastic particles.
+        </p>
+
+        <div class="upload-box">
+
+            <input type="file" id="imageInput" accept="image/*">
+
+            <label for="imageInput">
+                <div class="upload-icon">⬆</div>
+                <h3>Upload Water Sample Image</h3>
+                <p>JPG, PNG or JPEG</p>
+            </label>
+
+            <button onclick="analyzeImage()" class="btn">
+                Analyze Sample
+            </button>
+
+        </div>
+
+        <div id="preview"></div>
+
+        <div id="result" class="result">
+            <h3>Analysis Result</h3>
+
+            <div class="result-grid">
+                <div>
+                    <span>Particles</span>
+                    <strong id="particleCount">-</strong>
+                </div>
+
+                <div>
+                    <span>Estimated Concentration</span>
+                    <strong id="concentration">-</strong>
+                </div>
+
+                <div>
+                    <span>Risk Level</span>
+                    <strong id="risk">-</strong>
+                </div>
+
+                <div>
+                    <span>Confidence</span>
+                    <strong id="confidence">-</strong>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="analysis" class="section dark">
+        <h2>Water Quality Analysis</h2>
+
+        <div class="cards">
+
+            <div class="card">
+                <div class="icon">🔬</div>
+                <h3>Particle Detection</h3>
+                <p>
+                    Identifies possible microplastic particles from
+                    uploaded microscope images.
+                </p>
+            </div>
+
+            <div class="card">
+                <div class="icon">📊</div>
+                <h3>Concentration Analysis</h3>
+                <p>
+                    Estimates the number of particles detected in
+                    the analyzed water sample.
+                </p>
+            </div>
+
+            <div class="card">
+                <div class="icon">⚠️</div>
+                <h3>Risk Assessment</h3>
+                <p>
+                    Provides an indicative risk classification based
+                    on detected particle concentration.
+                </p>
+            </div>
+
+            <div class="card">
+                <div class="icon">🤖</div>
+                <h3>AI Assistance</h3>
+                <p>
+                    AI-based analysis can assist researchers in
+                    identifying suspicious particles.
+                </p>
+            </div>
+
+        </div>
+    </section>
+
+    <section id="about" class="section">
+        <h2>About The Project</h2>
+
+        <div class="about">
+            <div>
+                <h3>Why Microplastics?</h3>
+
+                <p>
+                    Microplastics are very small plastic particles that
+                    can enter water systems through plastic waste,
+                    industrial processes, wastewater and environmental
+                    pollution.
+                </p>
+
+                <p>
+                    This project demonstrates how artificial intelligence
+                    and image analysis can assist in detecting and
+                    analyzing possible microplastic particles in drinking
+                    water samples.
+                </p>
+            </div>
+
+            <div class="workflow">
+                <h3>System Workflow</h3>
+
+                <div>1. Collect Water Sample</div>
+                <div>↓</div>
+                <div>2. Capture Microscope Image</div>
+                <div>↓</div>
+                <div>3. Upload Image</div>
+                <div>↓</div>
+                <div>4. AI Analysis</div>
+                <div>↓</div>
+                <div>5. Generate Result</div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section contact">
+        <h2>Project Information</h2>
+
+        <p>
+            AI-Enabled Detection and Analysis of Microplastics
+            in Drinking Water Systems
+        </p>
+
+        <button class="btn" onclick="showMessage()">
+            Project Status
+        </button>
+
+        <p id="message"></p>
+    </section>
+
+    <footer>
+        <p>© 2026 MicroDetect AI | AI for Cleaner Water</p>
+    </footer>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
